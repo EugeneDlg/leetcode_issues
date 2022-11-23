@@ -1,13 +1,13 @@
-def generateParenthesis(cap):
-    egress_list = ["("*cap+")"*cap]
-    digits_list = [[cap]]
-    for j in digits_list:
-        a = j[len(j)-1]
-        for i in range(1, a):
-            temp_list = j[:len(j)-1] + [i] + [a-i]
-            digits_list.append(temp_list[:])
-            egress_list.append("".join(["("*_ + ")"*_ for _ in temp_list]))
-    return digits_list, egress_list
+# def generateParenthesis(cap):
+#     egress_list = ["("*cap+")"*cap]
+#     digits_list = [[cap]]
+#     for j in digits_list:
+#         a = j[len(j)-1]
+#         for i in range(1, a):
+#             temp_list = j[:len(j)-1] + [i] + [a-i]
+#             digits_list.append(temp_list[:])
+#             egress_list.append("".join(["("*_ + ")"*_ for _ in temp_list]))
+#     return digits_list, egress_list
 
 
 class Solution:
